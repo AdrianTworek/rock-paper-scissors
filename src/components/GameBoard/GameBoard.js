@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
-import { colors } from '../../colors'
 
+import { colors } from '../../colors'
 import {
   BoardContainer,
   BoardButton,
@@ -105,6 +106,12 @@ const GameBoard = ({ bonusLayout, setPlayerPick, handleComputerPick }) => {
       )}
     </BoardContainer>
   )
+}
+
+GameBoard.propTypes = {
+  bonusLayout: PropTypes.bool,
+  setPlayerPick: PropTypes.func,
+  handleComputerPick: PropTypes.func,
 }
 
 export default GameBoard

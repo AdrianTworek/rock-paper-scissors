@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import {
   FooterContainer,
   FooterButtonBonus,
@@ -33,6 +35,12 @@ const Footer = ({ bonusLayout, setBonusLayout, setRulesModal }) => {
       </FooterButtonRules>
     </FooterContainer>
   )
+}
+
+Footer.propTypes = {
+  bonusLayout: PropTypes.bool,
+  setBonusLayout: PropTypes.func,
+  setRulesModal: PropTypes.func,
 }
 
 export default Footer

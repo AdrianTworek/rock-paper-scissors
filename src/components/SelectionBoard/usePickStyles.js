@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { colors } from '../../colors'
 
 const usePickStyles = (playerPick, computerPick) => {
@@ -73,6 +74,11 @@ const usePickStyles = (playerPick, computerPick) => {
     outerShadow,
     outerShadowComputer,
   }
+}
+
+usePickStyles.propTypes = {
+  playerPick: PropTypes.string,
+  computerPick: PropTypes.string,
 }
 
 export default usePickStyles

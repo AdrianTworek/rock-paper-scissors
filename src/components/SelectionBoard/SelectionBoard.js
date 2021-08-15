@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useState, useEffect } from 'react'
 import usePickStyles from './usePickStyles'
 
@@ -104,6 +105,14 @@ const SelectionBoard = ({
       <Result result={result} score={score} setScore={setScore} />
     </SelectionBoardContainer>
   )
+}
+
+SelectionBoard.propTypes = {
+  playerPick: PropTypes.string,
+  computerPick: PropTypes.string,
+  getResult: PropTypes.func,
+  score: PropTypes.number,
+  setScore: PropTypes.func,
 }
 
 export default SelectionBoard

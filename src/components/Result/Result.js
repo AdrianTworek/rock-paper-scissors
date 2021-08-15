@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { colors } from '../../colors'
@@ -49,6 +50,12 @@ const Result = ({ result, score, setScore }) => {
       </ResultPlayAgainButton>
     </ResultContainer>
   )
+}
+
+Result.propTypes = {
+  result: PropTypes.string,
+  score: PropTypes.number,
+  setScore: PropTypes.func,
 }
 
 export default Result

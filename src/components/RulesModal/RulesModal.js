@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { colors } from '../../colors'
 import {
   RulesModalOverlay,
@@ -33,6 +35,11 @@ const RulesModal = ({ bonusLayout, setRulesModal }) => {
       </RulesModalContainer>
     </>
   )
+}
+
+RulesModal.propTypes = {
+  bonusLayout: PropTypes.bool,
+  setRulesModal: PropTypes.func,
 }
 
 export default RulesModal

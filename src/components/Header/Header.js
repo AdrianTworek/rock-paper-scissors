@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { colors } from '../../colors'
 import {
   HeaderContainer,
@@ -27,6 +29,11 @@ const Header = ({ bonusLayout, score }) => {
       </HeaderScore>
     </HeaderContainer>
   )
+}
+
+Header.propTypes = {
+  bonusLayout: PropTypes.bool,
+  score: PropTypes.number,
 }
 
 export default Header
